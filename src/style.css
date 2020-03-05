@@ -6,9 +6,10 @@ html {
 
 body {
   margin: 0;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-areas: "1 2"
+    "4 3"
+    "5 6";
 }
 
 .block-first {
@@ -40,23 +41,17 @@ body {
 }
 
 .block-info {
-  display: flex;
-  flex-grow: 1;
-  height: 300px;
-  flex-basis: 300px;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 300px;
+  line-height: 300px;
+  text-align: center;
   color: white;
 }
 
 @media screen and (max-width: 599px) {
 
   body {
-    flex-direction: column;
-  }
-
-  .block-info {
-    width: 100%;
+    grid-template-areas: "1" "2" "3" "4" "5" "6";
   }
 
   .block-forth {
@@ -68,6 +63,11 @@ body {
 }
 
 @media screen and (min-width: 900px) {
+
+  body {
+    grid-template-areas: "1 2 3"
+      "6 5 4";
+  }
 
   .block-third {
     order: 1;
@@ -84,13 +84,4 @@ body {
   .block-lastone {
     order: 2;
   }
-
-}
-
-@media screen and (min-width: 1199px) {
-
-  .block-info {
-    flex-basis: 30%;
-  }
-
 }
