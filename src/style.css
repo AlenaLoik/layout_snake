@@ -20,22 +20,18 @@ body {
 
 .block-third {
   background-color: #900;
-  order: 2;
 }
 
 .block-forth {
   background-color: #600;
-  order: 1;
 }
 
 .block-fifth {
   background-color: #300;
-  order: 3;
 }
 
 .block-lastone {
   background-color: black;
-  order: 4;
 }
 
 .block-info {
@@ -51,34 +47,11 @@ body {
   body {
     grid-template-columns: 1fr;
   }
-
-  .block-forth {
-    order: 2;
-  }
-  .block-third {
-    order: 1;
-  }
 }
 
 @media screen and (min-width: 900px) {
 
   body {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .block-third {
-    order: 1;
-  }
-
-  .block-forth {
-    order: 4;
-  }
-
-  .block-fifth {
-    order: 3;
-  }
-
-  .block-lastone {
-    order: 2;
   }
 }
